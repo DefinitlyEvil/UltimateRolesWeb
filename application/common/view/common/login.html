@@ -1,0 +1,21 @@
+<div class="login-form container-fluid" style="border: 2px solid #eee; ">
+  <h2>{{$Think.lang.login}}</h2>
+  <form action="{{$Request.root}}/my/auth/check" method="POST">
+    <div class="form-group">
+      <label for="login_username">{{$Think.lang.username}}</label>
+      <input class="form-control" id="login_username" name="username" placeholder="Username">
+    </div>
+    <div class="form-group">
+      <label for="login_password">{{$Think.lang.password}}</label>
+      <input type="password" class="form-control" id="login_password" name="password" placeholder="Password">
+    </div>
+    <button type="submit" class="btn btn-default">{{$Think.lang.login}}</button><br />
+    <a href="#" onclick="$('#info_register').toggle(); ">{{$Think.lang.create_account}}</a>
+    <div id="info_register" style="display: none; margin-bottom: 4px; " class="ui-widget-content ui-corner-all">
+      <h3 class="ui-widget-header ui-corner-all">{{$Think.lang.create_account}}</h3>
+      <p>
+      {{$Think.lang.create_account_full}}<br />
+      </p>
+    </div>
+  </form>
+</div>

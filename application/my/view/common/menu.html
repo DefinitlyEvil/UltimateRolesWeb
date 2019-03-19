@@ -1,0 +1,34 @@
+<li class="sidebar-brand">
+  <a href="{{$Request.root}}">
+    <h1>Welcome</h1>
+  </a>
+</li>
+<div style="color: #fff; padding-left: 16px; ">
+{{empty name="Think.session.user_id"}}
+Not logged in, <a href="{{$Request.root}}/my/auth/login">login now</a>! 
+{{else /}}
+Welcome, {{$Think.session.user_name}}! <a href="{{$Request.root}}/my/auth/logout" style="color: #ddd; ">Logout</a><br />
+&gt;&gt; Home 
+{{/empty}}
+</div>
+<hr />
+<li><a href="{{$Request.root}}">Home</a></li>
+<li>
+  <a href="{{$Request.root}}/my">My</a>
+  <ul id="my_pages">
+    <li><a href="{{$Request.root}}/{{$Request.module}}/Index/index">My Home</a></li>
+    <li><a href="{{$Request.root}}/{{$Request.module}}/Perks/index">Manage Roles</a></li>
+  </ul>
+</li>
+<hr />
+<li>
+  <a href="{{$Request.root}}/shop">Shop</a>
+  <ul id="categories">
+{{volist name="item_categories" id="c"}}
+<li><a href="{{$Request.root}}/shop/Index/index/id/{{$c.id}}">{{$c.name}}</a></li>
+{{/volist}}
+  </ul>
+</li>
+<script type="javascript">
+  $(function(){$("#menu").menu();});
+</script>
