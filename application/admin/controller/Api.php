@@ -12,10 +12,11 @@ use app\common\model\PerkItem;
 use app\common\model\ServerDefinition;
 use app\common\model\ShopItem;
 use app\common\model\User;
+use think\Controller;
 use think\controller\Rest;
 use think\Validate;
 
-class Api extends Rest {
+class Api extends Controller {
     public function __construct(){
         if(isset($_GET["key"])) {
             $k = $_GET["key"];
