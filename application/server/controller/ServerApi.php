@@ -4,9 +4,10 @@
 namespace app\server\controller;
 
 
-use think\controller\Rest;
 
-class ServerApi extends Rest {
+use think\Controller;
+
+class ServerApi extends Controller {
     const VERSION = "1.0";
 
     public function __construct(){

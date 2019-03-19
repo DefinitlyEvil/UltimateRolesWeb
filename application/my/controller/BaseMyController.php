@@ -9,7 +9,7 @@ use think\Controller;
 use think\Url;
 
 class BaseMyController extends Controller {
-    public function _initialize() {
+    public function initialize() {
         $this->assign("item_categories", ShopCategory::all());
 
         if(!session("?user_id")) {

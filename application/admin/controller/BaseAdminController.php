@@ -7,7 +7,7 @@ namespace app\admin\controller;
 use think\Controller;
 
 class BaseAdminController extends Controller {
-    public function _initialize() {
+    public function initialize() {
         if(!session("?admin")) {
             $this->redirect("admin/auth/login");
             exit();
