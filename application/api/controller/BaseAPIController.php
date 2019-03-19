@@ -4,9 +4,9 @@
 namespace app\api\controller;
 
 use app\common\model\User;
-use think\controller\Rest;
+use think\Controller;
 
-class BaseAPIController extends Rest {
+class BaseAPIController extends Controller {
 
     public function __construct(){
         if(!session("?user_id")) {
