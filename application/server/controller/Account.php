@@ -102,7 +102,7 @@ class Account extends ServerApi {
         $u->save([
             "last_login" => time()
         ]);
-        return $this->json();
+        return $this->json(["username" => $u->username, "uuid" => $u->uuid]);
     }
 
     private static function getClientAccountCount($client_ip){
