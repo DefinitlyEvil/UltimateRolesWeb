@@ -69,6 +69,7 @@ return [
     "server_reg_error_user_exists" => "注册失败, 玩家已存在! ",
     "server_login_error_user_not_found" => "登陆失败, 这个账号还没有注册! ",
     "server_login_error_password" => "密码错误! ",
+    "max_registration_reached" => "每个玩家一天最多只能注册3个账号! ",
 
     "card_invalid_info" => "无效卡密! ",
     "card_used" => "卡密已经使用过了",

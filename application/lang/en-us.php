@@ -70,6 +70,7 @@ return [
     "server_reg_error_user_exists" => "Registration failed, user already exists! ",
     "server_login_error_user_not_found" => "Login failed, user not registered! ",
     "server_login_error_password" => "Wrong password! ",
+    "max_registration_reached" => "Max registrations limited, you can only create 3 accounts per day! ",
 
     "card_invalid_info" => "Invalid card information! ",
     "card_used" => "Card is already used! ",
