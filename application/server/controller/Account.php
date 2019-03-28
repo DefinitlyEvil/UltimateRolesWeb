@@ -99,8 +99,9 @@ class Account extends ServerApi {
         if($u->password !== $password) {
             return $this->json([], "error", lang("server_login_error_password"));
         }
-        $u->last_login = time();
-        $u->save();
+        $u->save([
+            "last_login" => time()
+        ]);
         return $this->json();
     }
 
