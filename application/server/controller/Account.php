@@ -101,7 +101,7 @@ class Account extends ServerApi {
         }
         $u->save([
             "last_login" => time(),
-            "lastest_ip" => trim($_GET["client_ip"])
+            "latest_ip" => trim($_GET["client_ip"])
         ]);
         return $this->json(["username" => $u->username, "uuid" => $u->uuid]);
     }
