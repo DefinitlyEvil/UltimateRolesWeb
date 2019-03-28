@@ -50,7 +50,7 @@ class Account extends ServerApi {
         // 3 account per day
         $client_ip = trim($_GET["client_ip"]);
         $registerd_count = self::getClientAccountCount($client_ip);
-        if($registerd_count > 3) {
+        if($registerd_count > 1) {
             return $this->json([], "error", lang("max_registration_reached"));
         }
 
